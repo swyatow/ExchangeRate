@@ -44,16 +44,17 @@
             this.AboutPanel.Controls.Add(this.pictureBox1);
             this.AboutPanel.Controls.Add(this.InfoLabel);
             this.AboutPanel.Controls.Add(this.MainLabel);
-            this.AboutPanel.Location = new System.Drawing.Point(12, 12);
+            this.AboutPanel.Location = new System.Drawing.Point(62, 30);
             this.AboutPanel.Name = "AboutPanel";
-            this.AboutPanel.Size = new System.Drawing.Size(481, 411);
+            this.AboutPanel.Size = new System.Drawing.Size(481, 448);
             this.AboutPanel.TabIndex = 0;
             // 
             // OKButton
             // 
+            this.OKButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.OKButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.OKButton.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.OKButton.Location = new System.Drawing.Point(60, 238);
+            this.OKButton.Location = new System.Drawing.Point(60, 258);
             this.OKButton.Name = "OKButton";
             this.OKButton.Size = new System.Drawing.Size(84, 77);
             this.OKButton.TabIndex = 7;
@@ -63,8 +64,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 130);
+            this.pictureBox1.Location = new System.Drawing.Point(200, 150);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 259);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -73,11 +75,12 @@
             // 
             // InfoLabel
             // 
+            this.InfoLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.InfoLabel.AutoSize = true;
             this.InfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.InfoLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.InfoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.InfoLabel.Location = new System.Drawing.Point(21, 71);
+            this.InfoLabel.Location = new System.Drawing.Point(21, 91);
             this.InfoLabel.Name = "InfoLabel";
             this.InfoLabel.Size = new System.Drawing.Size(435, 69);
             this.InfoLabel.TabIndex = 6;
@@ -86,9 +89,10 @@
             // 
             // MainLabel
             // 
+            this.MainLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MainLabel.AutoSize = true;
             this.MainLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainLabel.Location = new System.Drawing.Point(151, 20);
+            this.MainLabel.Location = new System.Drawing.Point(151, 40);
             this.MainLabel.Name = "MainLabel";
             this.MainLabel.Size = new System.Drawing.Size(199, 38);
             this.MainLabel.TabIndex = 1;
@@ -98,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 435);
+            this.ClientSize = new System.Drawing.Size(621, 511);
             this.Controls.Add(this.AboutPanel);
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

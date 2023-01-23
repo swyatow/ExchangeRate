@@ -14,7 +14,6 @@ namespace ExchangeRate
 {
     public partial class LoginForm : Form
     {
-        public bool isLoggedIn = false;
 
         public LoginForm()
         {
@@ -38,8 +37,8 @@ namespace ExchangeRate
             if(LoginTB.Text == Properties.Resources.Login && hashedInputValue == correctPassword)
             {
                 FavouritesRepository favRep = new FavouritesRepository();
-                isLoggedIn = true;
-                if(favRep.GetAllFavourites().Count() > 0) (LoginPanel.Parent as MainForm).ShowFav();
+                (LoginPanel.Parent as MainForm).UnlockExchangeRate(true);
+                if (favRep.GetAllFavourites().Count() > 0) (LoginPanel.Parent as MainForm).ShowFav();
                 LoginPanel.Dispose();
             }
             else

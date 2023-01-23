@@ -53,6 +53,7 @@
             // 
             // ErrorLabel
             // 
+            this.ErrorLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ErrorLabel.AutoSize = true;
             this.ErrorLabel.BackColor = System.Drawing.Color.Transparent;
             this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -66,6 +67,7 @@
             // 
             // CancelButton
             // 
+            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CancelButton.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CancelButton.Location = new System.Drawing.Point(257, 310);
@@ -78,6 +80,7 @@
             // 
             // EnterButton
             // 
+            this.EnterButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.EnterButton.Enabled = false;
             this.EnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EnterButton.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -91,6 +94,7 @@
             // 
             // PasswordTB
             // 
+            this.PasswordTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PasswordTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PasswordTB.Location = new System.Drawing.Point(75, 196);
             this.PasswordTB.Name = "PasswordTB";
@@ -102,6 +106,7 @@
             // 
             // LoginTB
             // 
+            this.LoginTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LoginTB.Location = new System.Drawing.Point(75, 120);
             this.LoginTB.Name = "LoginTB";
@@ -112,6 +117,7 @@
             // 
             // MainLabel
             // 
+            this.MainLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MainLabel.AutoSize = true;
             this.MainLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MainLabel.Location = new System.Drawing.Point(198, 42);

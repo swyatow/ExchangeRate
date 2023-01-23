@@ -30,58 +30,48 @@ namespace ExchangeRate
 
         public void ShowFav()
         {
-            избранныеВалютыToolStripMenuItem.PerformClick();
+            favCurrencyButton.PerformClick();
         }
 
         public void UnlockExchangeRate(bool value)
         {
-            войтиВАккаунтToolStripMenuItem.Enabled = !value;
-            выйтиИзАккаунтаToolStripMenuItem.Enabled = value;
-            курсВалютToolStripMenuItem.Enabled = value;
+            logInButton.Enabled = !value;
+            logOutButton.Enabled = value;
+            currencyDropDown.Enabled = value;
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
-        {
-            if (oldPanel != null)
-            {
-                oldPanel.Left = ActiveForm.Width / 2 - oldPanel.Width / 2 - 10;
-            }
-        }
-
-        private void войтиВАккаунтToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void logInButton_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             SetContent(loginForm.GetPanel());
         }
 
-        private void закрытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fileCloseButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void списокВалютToolStripMenuItem_Click(object sender, EventArgs e)
+        private void currencyListButton_Click(object sender, EventArgs e)
         {
             ListForm listForm = new ListForm(false);
-            Height = listForm.Height + 40;
             SetContent(listForm.GetPanel());
         }
 
-        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutButton_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             SetContent(aboutForm.GetPanel());
         }
 
-        private void выйтиИзАккаунтаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logOutButton_Click(object sender, EventArgs e)
         {
             Controls.Remove(Controls["ListPanel"]);
             UnlockExchangeRate(false);
         }
 
-        private void избранныеВалютыToolStripMenuItem_Click(object sender, EventArgs e)
+        private void favCurrencyButton_Click(object sender, EventArgs e)
         {
             ListForm listForm = new ListForm(true);
-            Height = listForm.Height + 40;
             SetContent(listForm.GetPanel());
         }
 
@@ -95,20 +85,11 @@ namespace ExchangeRate
                     oldParentForm.Close();
                 }
             }
-            var targetForm = targetPanel.Parent;
+            oldParent = targetPanel.Parent;
             oldPanel = targetPanel;
-            oldParent = targetForm;
-            oldPanel.Disposed += TargetPanel_Disposed;
             oldPanel.Parent = this;
-            oldPanel.Left = Width / 2 - oldPanel.Width / 2 - 10;
-        }
-
-        private void TargetPanel_Disposed(object? sender, EventArgs e)
-        {
-            if (oldParent is LoginForm oldLoginForm)
-            {
-                UnlockExchangeRate(oldLoginForm.isLoggedIn);
-            }
+            Controls.SetChildIndex(oldPanel, 0);
+            oldPanel.Dock = DockStyle.Fill;
         }
 
         private void GetCbInfo()

@@ -31,16 +31,16 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.dateTimeString = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.аккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.войтиВАккаунтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выйтиИзАккаунтаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.курсВалютToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.списокВалютToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.избранныеВалютыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileDropDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileCloseButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountDropDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.logInButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.currencyDropDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.currencyListButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.favCurrencyButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutDropDown = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,9 +50,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateTimeString});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 424);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 426);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 24);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -60,114 +60,112 @@
             // 
             this.dateTimeString.BackColor = System.Drawing.SystemColors.Control;
             this.dateTimeString.Name = "dateTimeString";
-            this.dateTimeString.Size = new System.Drawing.Size(151, 20);
-            this.dateTimeString.Text = "toolStripStatusLabel1";
+            this.dateTimeString.Size = new System.Drawing.Size(0, 18);
             // 
             // menuStrip1
             // 
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem,
-            this.аккаунтToolStripMenuItem,
-            this.курсВалютToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.fileDropDown,
+            this.accountDropDown,
+            this.currencyDropDown,
+            this.aboutDropDown});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // файлToolStripMenuItem
+            // fileDropDown
             // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.закрытьToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.файлToolStripMenuItem.Text = "Файл";
+            this.fileDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileCloseButton});
+            this.fileDropDown.Name = "fileDropDown";
+            this.fileDropDown.Size = new System.Drawing.Size(59, 24);
+            this.fileDropDown.Text = "Файл";
             // 
-            // закрытьToolStripMenuItem
+            // fileCloseButton
             // 
-            this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
-            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.закрытьToolStripMenuItem.Text = "Закрыть";
-            this.закрытьToolStripMenuItem.Click += new System.EventHandler(this.закрытьToolStripMenuItem_Click);
+            this.fileCloseButton.Name = "fileCloseButton";
+            this.fileCloseButton.Size = new System.Drawing.Size(149, 26);
+            this.fileCloseButton.Text = "Закрыть";
+            this.fileCloseButton.Click += new System.EventHandler(this.fileCloseButton_Click);
             // 
-            // аккаунтToolStripMenuItem
+            // accountDropDown
             // 
-            this.аккаунтToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.войтиВАккаунтToolStripMenuItem,
-            this.выйтиИзАккаунтаToolStripMenuItem});
-            this.аккаунтToolStripMenuItem.Name = "аккаунтToolStripMenuItem";
-            this.аккаунтToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.аккаунтToolStripMenuItem.Text = "Аккаунт";
+            this.accountDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logInButton,
+            this.logOutButton});
+            this.accountDropDown.Name = "accountDropDown";
+            this.accountDropDown.Size = new System.Drawing.Size(77, 24);
+            this.accountDropDown.Text = "Аккаунт";
             // 
-            // войтиВАккаунтToolStripMenuItem
+            // logInButton
             // 
-            this.войтиВАккаунтToolStripMenuItem.Name = "войтиВАккаунтToolStripMenuItem";
-            this.войтиВАккаунтToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.войтиВАккаунтToolStripMenuItem.Text = "Войти в аккаунт";
-            this.войтиВАккаунтToolStripMenuItem.Click += new System.EventHandler(this.войтиВАккаунтToolStripMenuItem1_Click);
+            this.logInButton.Name = "logInButton";
+            this.logInButton.Size = new System.Drawing.Size(220, 26);
+            this.logInButton.Text = "Войти в аккаунт";
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
             // 
-            // выйтиИзАккаунтаToolStripMenuItem
+            // logOutButton
             // 
-            this.выйтиИзАккаунтаToolStripMenuItem.Enabled = false;
-            this.выйтиИзАккаунтаToolStripMenuItem.Name = "выйтиИзАккаунтаToolStripMenuItem";
-            this.выйтиИзАккаунтаToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.выйтиИзАккаунтаToolStripMenuItem.Text = "Выйти из аккаунта";
-            this.выйтиИзАккаунтаToolStripMenuItem.Click += new System.EventHandler(this.выйтиИзАккаунтаToolStripMenuItem_Click);
+            this.logOutButton.Enabled = false;
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(220, 26);
+            this.logOutButton.Text = "Выйти из аккаунта";
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
-            // курсВалютToolStripMenuItem
+            // currencyDropDown
             // 
-            this.курсВалютToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.списокВалютToolStripMenuItem,
-            this.избранныеВалютыToolStripMenuItem});
-            this.курсВалютToolStripMenuItem.Enabled = false;
-            this.курсВалютToolStripMenuItem.Name = "курсВалютToolStripMenuItem";
-            this.курсВалютToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.курсВалютToolStripMenuItem.Text = "Курс валют";
+            this.currencyDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.currencyListButton,
+            this.favCurrencyButton});
+            this.currencyDropDown.Enabled = false;
+            this.currencyDropDown.Name = "currencyDropDown";
+            this.currencyDropDown.Size = new System.Drawing.Size(101, 24);
+            this.currencyDropDown.Text = "Курс валют";
             // 
-            // списокВалютToolStripMenuItem
+            // currencyListButton
             // 
-            this.списокВалютToolStripMenuItem.Name = "списокВалютToolStripMenuItem";
-            this.списокВалютToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
-            this.списокВалютToolStripMenuItem.Text = "Список валют";
-            this.списокВалютToolStripMenuItem.Click += new System.EventHandler(this.списокВалютToolStripMenuItem_Click);
+            this.currencyListButton.Name = "currencyListButton";
+            this.currencyListButton.Size = new System.Drawing.Size(230, 26);
+            this.currencyListButton.Text = "Список валют";
+            this.currencyListButton.Click += new System.EventHandler(this.currencyListButton_Click);
             // 
-            // избранныеВалютыToolStripMenuItem
+            // favCurrencyButton
             // 
-            this.избранныеВалютыToolStripMenuItem.Name = "избранныеВалютыToolStripMenuItem";
-            this.избранныеВалютыToolStripMenuItem.Size = new System.Drawing.Size(230, 26);
-            this.избранныеВалютыToolStripMenuItem.Text = "Избранные валюты";
-            this.избранныеВалютыToolStripMenuItem.Click += new System.EventHandler(this.избранныеВалютыToolStripMenuItem_Click);
+            this.favCurrencyButton.Name = "favCurrencyButton";
+            this.favCurrencyButton.Size = new System.Drawing.Size(230, 26);
+            this.favCurrencyButton.Text = "Избранные валюты";
+            this.favCurrencyButton.Click += new System.EventHandler(this.favCurrencyButton_Click);
             // 
-            // справкаToolStripMenuItem
+            // aboutDropDown
             // 
-            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.оПрограммеToolStripMenuItem});
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.справкаToolStripMenuItem.Text = "Справка";
+            this.aboutDropDown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutButton});
+            this.aboutDropDown.Name = "aboutDropDown";
+            this.aboutDropDown.Size = new System.Drawing.Size(81, 24);
+            this.aboutDropDown.Text = "Справка";
             // 
-            // оПрограммеToolStripMenuItem
+            // aboutButton
             // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            this.aboutButton.Name = "aboutButton";
+            this.aboutButton.Size = new System.Drawing.Size(187, 26);
+            this.aboutButton.Text = "О программе";
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.statusStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
-            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -180,16 +178,16 @@
         #endregion
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem закрытьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem аккаунтToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem войтиВАккаунтToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem выйтиИзАккаунтаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem курсВалютToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem списокВалютToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem избранныеВалютыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileDropDown;
+        private System.Windows.Forms.ToolStripMenuItem fileCloseButton;
+        private System.Windows.Forms.ToolStripMenuItem accountDropDown;
+        private System.Windows.Forms.ToolStripMenuItem logInButton;
+        private System.Windows.Forms.ToolStripMenuItem logOutButton;
+        private System.Windows.Forms.ToolStripMenuItem currencyDropDown;
+        private System.Windows.Forms.ToolStripMenuItem currencyListButton;
+        private System.Windows.Forms.ToolStripMenuItem favCurrencyButton;
+        private System.Windows.Forms.ToolStripMenuItem aboutDropDown;
+        private System.Windows.Forms.ToolStripMenuItem aboutButton;
         private System.Windows.Forms.ToolStripStatusLabel dateTimeString;
     }
 }

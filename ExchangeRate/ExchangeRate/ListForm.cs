@@ -28,11 +28,10 @@ namespace ExchangeRate
             isInFavList = isFav;
             favRep = new FavouritesRepository();
             currencies = CurrencyList.List;
-            ListPanel.Top += 10;
             ListPanel.BackColor = Color.FromArgb(51, 54, 118);
             if (currencies.Count > 0)
             {
-                basey = ListPanel.Location.Y;
+                basey = 10;
                 if (isFav)
                 {
                     UpdateFavList();
@@ -56,7 +55,7 @@ namespace ExchangeRate
             {
                 ListPanel.Controls.RemoveAt(i);
             }
-            basey = ListPanel.Location.Y;
+            basey = 10;
             foreach (CurrencyItem item in currencies)
             {
                 Favourite fav = favRep.GetFavourite(item.LetterCode);
@@ -136,12 +135,12 @@ namespace ExchangeRate
                 Left = 500,
                 Height = 50,
                 Width = 125,
-                FlatStyle = FlatStyle.Popup
+                FlatStyle = FlatStyle.Popup,
+                Parent = layout
             };
             addToFav.Click += addToFav_Click;
-            addToFav.Parent = layout;
 
-            layout.Left = ListPanel.Location.X;
+            layout.Anchor = AnchorStyles.Top;
             layout.Top = basey;
             basey += (layout.Size.Height + 10);
             layout.Parent = ListPanel;
@@ -161,7 +160,14 @@ namespace ExchangeRate
                 (sender as Button).Text = "Удалить\nиз избранного";
 
             }
-            if (isInFavList) UpdateFavList();
+            
+            if (isInFavList) 
+            {
+                ListPanel.Dock = DockStyle.None;
+                UpdateFavList();
+                ListPanel.Dock = DockStyle.Fill;
+            }
+            
         }
 
         private void ListForm_SizeChanged(object sender, EventArgs e)

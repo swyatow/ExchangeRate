@@ -38,16 +38,18 @@
             this.ListPanel.AutoScroll = true;
             this.ListPanel.Controls.Add(this.infoLabel);
             this.ListPanel.Location = new System.Drawing.Point(24, 12);
+            this.ListPanel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.ListPanel.Name = "ListPanel";
-            this.ListPanel.Size = new System.Drawing.Size(689, 525);
+            this.ListPanel.Size = new System.Drawing.Size(640, 525);
             this.ListPanel.TabIndex = 0;
             // 
             // infoLabel
             // 
+            this.infoLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.infoLabel.AutoSize = true;
             this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.infoLabel.ForeColor = System.Drawing.Color.Red;
-            this.infoLabel.Location = new System.Drawing.Point(154, 37);
+            this.infoLabel.Location = new System.Drawing.Point(130, 37);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(381, 56);
             this.infoLabel.TabIndex = 0;
